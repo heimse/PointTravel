@@ -1,0 +1,14 @@
+name: PointTravel
+version: 1.0
+main: com.example.pointtravel.PointTravelPlugin
+api-version: "1.21"
+commands:
+  setpoint:
+    description: Устанавливает точку с указанным именем.
+    usage: /setpoint <имя>
+  goto:
+    description: Телепортирует вас к точке с указанным именем.
+    usage: /goto <имя>
+  listpoints:
+    description: Выводит список всех установленных точек.
+    usage: /listpoints
