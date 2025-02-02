@@ -1,5 +1,6 @@
-package com.example.pointtravel;
+package com.example.pointtravel.commands;
 
+import com.example.pointtravel.PointTravelPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,10 +27,10 @@ public class ListPointsCommand implements CommandExecutor {
         Map<String, org.bukkit.Location> points = plugin.getTravelPoints().get(player.getUniqueId());
         if (points == null || points.isEmpty()) {
             player.sendMessage(ChatColor.YELLOW + "У вас не установлено ни одной точки.");
-            return true;
+        } else {
+            Set<String> pointNames = points.keySet();
+            player.sendMessage(ChatColor.YELLOW + "Ваши точки: " + String.join(", ", pointNames));
         }
-        Set<String> pointNames = points.keySet();
-        player.sendMessage(ChatColor.YELLOW + "Ваши точки: " + String.join(", ", pointNames));
         return true;
     }
 }

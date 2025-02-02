@@ -12,3 +12,9 @@ commands:
   listpoints:
     description: Выводит список всех установленных точек.
     usage: /listpoints
+  renamepoint:
+    description: Переименовывает существующую точку.
+    usage: /renamepoint <старое имя> <новое имя>
+  pointsmenu:
+    description: Открывает GUI для управления точками.
+    usage: /pointsmenu

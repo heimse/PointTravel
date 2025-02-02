@@ -1,5 +1,6 @@
-package com.example.pointtravel;
+package com.example.pointtravel.commands;
 
+import com.example.pointtravel.PointTravelPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;

@@ -1,5 +1,6 @@
-package com.example.pointtravel;
+package com.example.pointtravel.commands;
 
+import com.example.pointtravel.PointTravelPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,7 +30,6 @@ public class SetPointCommand implements CommandExecutor {
         Player player = (Player) sender;
         String pointName = args[0];
 
-        // Получаем или создаем карту точек для игрока
         Map<String, org.bukkit.Location> points = plugin.getTravelPoints()
                 .computeIfAbsent(player.getUniqueId(), k -> new HashMap<>());
         points.put(pointName, player.getLocation());
